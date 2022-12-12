@@ -42,5 +42,6 @@ const _posts = [
 //   };
 
 export const onRequest = async (context) => {
-    return new Response("Hello, world!")
+    const body = JSON.stringify(_posts);
+    return new Response(body)
 };
