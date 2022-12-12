@@ -9,7 +9,7 @@ const Post = (props) => {
 
   useEffect(() => {
     const getPost = async () => {
-      const resp = await fetch(`https://worker-backend.aruneel-das4992.workers.dev/api/posts/${id}`);
+      const resp = await fetch(`https://blog-frontend-b4d.pages.dev/apis/${id}`);
     // const resp = await fetch(`https://worker-backend.aruneel-das4992.workers.dev/api/posts/1`);
       const postResp = await resp.json();
       setPost(postResp);
