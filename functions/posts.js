@@ -20,6 +20,7 @@ export const onRequest = async (context) => {
     const body = JSON.stringify(await posts.all());
     response.headers.set('Access-Control-Allow-Origin', '*');
     response.headers.set('Content-type', 'application/json');
-    return  new Response(body, { headers });
+    response.body.set(body)
+    return response;
   };
 
