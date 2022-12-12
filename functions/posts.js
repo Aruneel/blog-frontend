@@ -41,6 +41,6 @@ const _posts = [
 //     return new Response(body)
 //   };
 
-  export function onRequest(context) {
+export const onRequest = async (context) => {
     return new Response("Hello, world!")
-}
+};
