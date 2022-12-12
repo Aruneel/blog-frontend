@@ -44,6 +44,8 @@ const _posts = [
 export const onRequest = async (context) => {
     const posts = new Store();
     const body = JSON.stringify(await posts.all());
+    response.headers.set('Access-Control-Allow-Origin', '*');
+    response.headers.set('Content-type', 'application/json');
     let response = new Response(body)
     return response;
     // const body = JSON.stringify(_posts);
