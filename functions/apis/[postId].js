@@ -12,7 +12,7 @@ import Store from '../../backend/posts_store';
 //     return new Response(body, { headers });
 // };
 
-context.params.user
+
 export const onRequest = async (context) => {
     const posts = new Store();
     const postId = context.params.postId;
