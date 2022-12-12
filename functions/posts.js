@@ -44,7 +44,8 @@ const _posts = [
 export const onRequest = async (context) => {
     const posts = new Store();
     const body = JSON.stringify(await posts.all());
-    return new Response(body)
+    let response = new Response(body)
+    return response;
     // const body = JSON.stringify(_posts);
     // return new Response(body)
 };
