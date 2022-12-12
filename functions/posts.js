@@ -29,15 +29,18 @@ const _posts = [
     },
 ];
 
-export const onRequest = async (context) => {
-    // const posts = new Store();
-    // const body = JSON.stringify(await posts.all());
-    // let response = new Response(body)
-    // response.headers.set('Access-Control-Allow-Origin', '*');
-    // response.headers.set('Content-type', 'application/json');
-    // // response.body.set(body)
-    // return response;
-    const body = JSON.stringify(_posts);
-    return new Response(body)
-  };
+// export const onRequest = async (context) => {
+//     // const posts = new Store();
+//     // const body = JSON.stringify(await posts.all());
+//     // let response = new Response(body)
+//     // response.headers.set('Access-Control-Allow-Origin', '*');
+//     // response.headers.set('Content-type', 'application/json');
+//     // // response.body.set(body)
+//     // return response;
+//     const body = JSON.stringify(_posts);
+//     return new Response(body)
+//   };
 
+  export function onRequest(context) {
+    return new Response("Hello, world!")
+}
