@@ -1,6 +1,6 @@
 import Store from '../backend/posts_store';
 
-export function onRequest(context) {
+export async function onRequest(context) {
     // return new Response(JSON.stringify(context.params.user))
     const posts = new Store();
     const postId = request.params.id;
@@ -12,3 +12,4 @@ export function onRequest(context) {
     };
     return new Response(body, { headers });
 }
+
