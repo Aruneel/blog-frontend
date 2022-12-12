@@ -7,7 +7,7 @@ const Posts = () => {
     useEffect(() => {
         const getPosts = async () => {
             
-            const resp = await fetch('https://blog-frontend-b4d.pages.dev/posts');
+            const resp = await fetch('https://blog-frontend-b4d.pages.dev/apis/posts');
             // const resp = await fetch('https://worker-backend.aruneel-das4992.workers.dev/api/posts');
             const postsResp = await resp.json();
             setPosts(postsResp);
