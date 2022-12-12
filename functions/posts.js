@@ -38,6 +38,6 @@ export const onRequest = async (context) => {
     // // response.body.set(body)
     // return response;
     const body = JSON.stringify(_posts);
-    return new Response(JSON.stringify(body))
+    return new Response(body)
   };
 
