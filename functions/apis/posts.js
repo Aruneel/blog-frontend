@@ -1,4 +1,4 @@
-import Store from '../../backend/posts_store';
+import Store from '../../db/posts_store';
 
 export const onRequest = async (context) => {
     const posts = new Store();

@@ -1,17 +1,4 @@
-import Store from '../../backend/posts_store';
-
-// const Post = async request => {
-//     const posts = new Store();
-//     const postId = request.params.id;
-
-//     const body = JSON.stringify(await posts.find(postId));
-//     const headers = {
-//         'Access-Control-Allow-Origin': '*',
-//         'Content-type': 'application/json',
-//     };
-//     return new Response(body, { headers });
-// };
-
+import Store from '../../db/posts_store';
 
 export const onRequest = async (context) => {
     const posts = new Store();
