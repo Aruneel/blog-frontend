@@ -18,7 +18,7 @@ const TodoList = (props) => {
             // console.log("postResp", postResp)
             const resp = await fetch('https://blog-frontend-b4d.pages.dev/kv/todoList');
             const postsResp = await resp.json();
-            setList(postResp);
+            setList(postsResp);
         };
 
         getPosts();
