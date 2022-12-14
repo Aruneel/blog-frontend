@@ -1,4 +1,3 @@
-import { getMouseEventOptions } from '@testing-library/user-event/dist/utils';
 import React, { useEffect, useState } from 'react';
 
 const TodoList = (props) => {
@@ -7,7 +6,9 @@ const TodoList = (props) => {
     useEffect(() => {
         const getEnv = async () => {
             const resp = await fetch('https://blog-frontend-b4d.pages.dev/env/env');
+            console.log("resp", resp)
             const env = await resp.json();
+            console.log("env", env)
             if(env == "production") {
                 const getPosts = async () => {
                     const response = await fetch('https://blog-frontend-b4d.pages.dev/kv/todoList');
