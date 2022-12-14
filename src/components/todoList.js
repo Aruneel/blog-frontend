@@ -5,10 +5,17 @@ const TodoList = (props) => {
 
     useEffect(() => {
         const getPosts = async () => {
-
-            const resp = await fetch('https://blog-frontend-b4d.pages.dev/kv/todoList');
+            const params = {
+                method: "GET",
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                }
+            };
+            const request = new Request('https://blog-frontend-b4d.pages.dev/kv/todoList', params);
+            const response = await fetch(request);
+            // const resp = await fetch('https://blog-frontend-b4d.pages.dev/kv/todoList');
             // const postsResp = await resp.json();
-            setList(resp);
+            setList(response);
         };
 
         getPosts();
