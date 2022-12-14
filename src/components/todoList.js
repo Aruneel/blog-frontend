@@ -7,8 +7,8 @@ const TodoList = (props) => {
         const getPosts = async () => {
 
             const resp = await fetch('https://blog-frontend-b4d.pages.dev/kv/todoList');
-            // const postsResp = await resp.json();
-            setList([resp]);
+            const postsResp = await resp.json();
+            setList(postsResp);
         };
 
         getPosts();
@@ -17,14 +17,15 @@ const TodoList = (props) => {
 
     return (
         <div>
-            <h1>Posts</h1>
-            {list.map(task => (
+            <h1>List</h1>
+            <span>{list}</span>
+            {/* {list.map(task => (
                 <div key={task}>
                     <h2>
                         <span>{task}</span>
                     </h2>
                 </div>
-            ))}
+            ))} */}
         </div>
     );
 };

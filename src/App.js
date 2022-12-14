@@ -13,9 +13,9 @@ function App() {
     <Router>
       <div>
         <Routes >
-          <Route exact path="/" element={<Posts  />} />
+          <Route exact path="/posts" element={<Posts  />} />
           <Route exact path="/posts/:id" element={<Post />} />
-          <Route exact path="/todolist" element={<TodoList />} />
+          <Route exact path="/" element={<TodoList />} />
         </Routes >
       </div>
     </Router>
