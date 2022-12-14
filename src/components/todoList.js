@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
 const TodoList = (props) => {
-    const [list, setList] = useState([]);
+    const [list, setList] = useState("");
 
     useEffect(() => {
         const getPosts = async () => {
 
             const resp = await fetch('https://blog-frontend-b4d.pages.dev/kv/todoList');
-            const postsResp = await resp.json();
-            setList(postsResp);
+            // const postsResp = await resp.json();
+            setList(resp);
         };
 
         getPosts();
