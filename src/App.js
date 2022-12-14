@@ -15,7 +15,7 @@ function App() {
         <Routes >
           <Route exact path="/" element={<Posts  />} />
           <Route exact path="/posts/:id" element={<Post />} />
-          <Route exact path="/todolist/:id" element={<TodoList />} />
+          <Route exact path="/todolist" element={<TodoList />} />
         </Routes >
       </div>
     </Router>

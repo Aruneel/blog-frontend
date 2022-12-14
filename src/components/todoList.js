@@ -7,8 +7,8 @@ const TodoList = (props) => {
         const getPosts = async () => {
 
             const resp = await fetch('https://blog-frontend-b4d.pages.dev/kv/todoList');
-            const postsResp = await resp.json();
-            setList([postsResp]);
+            // const postsResp = await resp.json();
+            setList([resp]);
         };
 
         getPosts();
