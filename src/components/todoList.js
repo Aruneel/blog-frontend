@@ -7,7 +7,7 @@ const TodoList = (props) => {
         const getEnv = async () => {
             const resp = await fetch('https://blog-frontend-b4d.pages.dev/env/env');
             console.log("resp", resp)
-            const env = await resp.json();
+            const env = await resp.text();
             console.log("env", env)
             if(env == "production") {
                 const getPosts = async () => {
