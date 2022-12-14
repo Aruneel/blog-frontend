@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from "react-router-dom";
 
-const Post = (props) => {
+const TodoList = (props) => {
     const [list, setList] = useState([]);
 
     useEffect(() => {
@@ -30,4 +29,4 @@ const Post = (props) => {
     );
 };
 
-export default Post;
+export default TodoList;
