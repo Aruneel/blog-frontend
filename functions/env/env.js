@@ -1,8 +1,8 @@
 export function onRequest(context) {
     let envVar = context.env.ENVIRONMENT
 	if (envVar == 'production' || envVar == 'ENVIRONMENT') {
-		return new Response('production');
+		return new Response("production");
 	} else {
-		return new Response('This is a development environment');
+		return new Response("development");
 	}
 }
