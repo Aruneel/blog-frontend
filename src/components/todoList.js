@@ -1,27 +1,26 @@
+import { getMouseEventOptions } from '@testing-library/user-event/dist/utils';
 import React, { useEffect, useState } from 'react';
 
 const TodoList = (props) => {
     const [list, setList] = useState("");
 
     useEffect(() => {
-        const getPosts = async () => {
-            // const params = {
-            //     method: "GET",
-            //     headers: {
-            //         'Access-Control-Allow-Origin': '*'
-            //     }
-            // };
-            // const request = new Request('https://blog-frontend-b4d.pages.dev/kv/todoList', params);
-            // const response = await fetch(request);
-            // console.log("response", response)
-            // const postResp = await response.json();
-            // console.log("postResp", postResp)
-            const resp = await fetch('https://blog-frontend-b4d.pages.dev/kv/todoList');
-            const postsResp = await resp.json();
-            setList(postsResp);
+        const getEnv = async () => {
+            const resp = await fetch('https://blog-frontend-b4d.pages.dev/env/env');
+            const env = await resp.json();
+            if(env = production) {
+                const getPosts = async () => {
+                    const resp = await fetch('https://blog-frontend-b4d.pages.dev/kv/todoList');
+                    const postsResp = await resp.json();
+                    setList(postsResp);
+                };
+        
+                getPosts();
+            }
         };
+        getEnv();
 
-        getPosts();
+       
     }, []);
 
 
