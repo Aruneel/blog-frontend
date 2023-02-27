@@ -1,5 +1,5 @@
-var a = new Array(4294967295);  //OK
-var b = new Array(-1); //range error
+// var a = new Array(4294967295);  //OK
+// var b = new Array(-1); //range error
 
 var num = 2.555555;
 document.writeln(num.toExponential(4));  //OK
